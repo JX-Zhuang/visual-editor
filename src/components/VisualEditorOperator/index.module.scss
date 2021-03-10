@@ -1,0 +1,10 @@
+.root {
+	padding: 10px !important;
+	display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.operatorContainer {
+	flex: 1;
+	overflow: auto;
+}

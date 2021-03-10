@@ -1,0 +1,85 @@
+$primary-color: #1890ff;
+$editorBodyBg: #f5f5f5;
+.root {
+	position: relative;
+	background: $editorBodyBg;
+	flex: 1;
+	overflow: auto;
+	padding: 40px;
+	justify-content: center;
+	display: flex;
+}
+.container {
+	width: 100%;
+	position: relative;
+	flex: 1;
+	border-top: 25px solid #e6e6e6;
+	border-radius: 3px 3px 0 0;
+	box-shadow: 0 1px 5px 0 rgb(0 0 0 / 28%);
+	background: #fff;
+	position: relative;
+	&::before {
+		position: absolute;
+		top: -15px;
+		left: 10px;
+		display: block;
+		width: 5px;
+		height: 5px;
+		background-color: #f44;
+		border-radius: 50%;
+		box-shadow: 0 0 0 2px #f44, 15px 0 0 2px #9b3, 30px 0 0 2px #fb5;
+		content: "";
+	}
+	&::after {
+		position: absolute;
+		top: -19px;
+		left: 55px;
+		display: block;
+		width: calc(100% - 60px);
+		height: 12px;
+		background-color: #fff;
+		border-radius: 2px;
+		content: "";
+	}
+}
+.body {
+	width: 100%;
+	overflow: auto;
+}
+.newPage {
+	position: relative;
+}
+.focusNewPage {
+	border: 1px dashed $primary-color;
+}
+.markX,
+.markY {
+	position: absolute;
+}
+.markX {
+	top: 0;
+	bottom: 0;
+	border-left: 1px dashed $primary-color;
+}
+.markY {
+	left: 0;
+	right: 0;
+	border-top: 1px dashed $primary-color;
+}
+.menu {
+	z-index: 2000;
+	position: absolute;
+	box-shadow: 0 2px 5px #999 !important;
+	border-radius: 4px;
+	background-color: #fff;
+	overflow: hidden;
+	.item {
+		cursor: pointer;
+		font-size: 14px;
+		padding: 10px;
+		&:hover {
+			background: $primary-color;
+			color: #fff;
+		}
+	}
+}

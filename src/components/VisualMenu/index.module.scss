@@ -1,0 +1,33 @@
+@import '../../styles/variable.scss';
+.componentContainer {
+	min-height: 80px;
+	margin-bottom: 20px;
+	padding: 20px;
+	border: 1px solid #ccc;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	background: #fff;
+	.label {
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: 4px 8px;
+		background: $primary-color;
+		color: #fff;
+		font-size: 12px;
+	}
+	&:after {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		content: "";
+	}
+	&:hover {
+		cursor: move;
+		border-color: $primary-color;
+	}
+}

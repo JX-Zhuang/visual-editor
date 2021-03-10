@@ -1,0 +1,44 @@
+@import '../../styles/variable.scss';
+.root {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	top: 200px;
+	left: 400px;
+	border: 1px dashed $primary-color;
+	z-index: 100;
+}
+.block {
+	width: 5px;
+	height: 5px;
+	background: $primary-color;
+	position: absolute;
+}
+.left {
+	@extend .block;
+	left: -3px;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor: col-resize;
+}
+.right {
+	@extend .block;
+	right: -3px;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor: col-resize;
+}
+.top {
+	@extend .block;
+	left: 50%;
+	top: -3px;
+	transform: translateX(-50%);
+	cursor: row-resize;
+}
+.bottom {
+	@extend .block;
+	left: 50%;
+	bottom: -3px;
+	transform: translateX(-50%);
+	cursor: row-resize;
+}

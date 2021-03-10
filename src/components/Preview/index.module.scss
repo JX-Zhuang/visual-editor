@@ -1,0 +1,48 @@
+.root {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0;
+	:global {
+		pre {
+			margin: 0;
+		}
+		.ant-modal {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: 0;
+			max-width: 100%;
+		}
+		.ant-modal-body {
+			height: 100vh;
+			overflow: hidden;
+			padding-top: 0;
+		}
+	}
+	.mainContent {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+	.newPageContainer {
+		flex: 1;
+		display: flex;
+		flex-wrap: nowrap;
+		width: 100%;
+		overflow: hidden;
+	}
+	.code {
+		width: 30%;
+	}
+}
+.header {
+	padding: 20px 0;
+}
+.cancel {
+	cursor: pointer;
+}

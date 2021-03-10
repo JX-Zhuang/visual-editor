@@ -1,0 +1,51 @@
+$menuWidth: 260px;
+$primary-color: #1890ff; // 全局主色
+.root {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+.sideMenu {
+	width: $menuWidth;
+	overflow: auto;
+	box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.3);
+	position: relative;
+}
+.componentsMenu {
+	@extend .sideMenu;
+	padding: 20px 10px;
+}
+.operationMenu {
+	@extend .sideMenu;
+	display: flex;
+	overflow: hidden;
+}
+.content {
+	display: flex;
+	flex-wrap: nowrap;
+	flex: 1;
+	overflow: hidden;
+}
+.newPage {
+	background: #fff;
+	position: relative;
+}
+.visualEditorBlock {
+	position: absolute;
+	&:after {
+		$space: -3px;
+		position: absolute;
+		top: $space;
+		left: $space;
+		right: $space;
+		bottom: $space;
+		content: "";
+	}
+	&.visualEditorBlockFocus {
+		&::after {
+			border: 1px dashed $primary-color;
+		}
+	}
+}
+
